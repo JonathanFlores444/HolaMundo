@@ -28,8 +28,14 @@ public class Formulario extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nombre = edNombres.getText().toString();
-                if(!nombre.isEmpty()){
-                    Toast.makeText(Formulario.this,"Holi",Toast.LENGTH_SHORT).show();
+                String apellido = edApellidos.getText().toString();
+                String cedula = edCedula.getText().toString();
+                String correo = edCorreo.getText().toString();
+                String direccion = edDireccion.getText().toString();
+                if(!nombre.isEmpty() && !apellido.isEmpty() && !cedula.isEmpty() && !correo.isEmpty() && !direccion.isEmpty()){
+                    Toast.makeText(Formulario.this,"Se completaron todos los campos",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(Formulario.this, "Por favor llene todos los campos",Toast.LENGTH_LONG).show();
                 }
 
 
